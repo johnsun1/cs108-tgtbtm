@@ -17,6 +17,7 @@
     <sprite>sprites\spr_player_2_class</sprite>
     <sprite>sprites\spr_player_3_class</sprite>
     <sprite>sprites\spr_title_2</sprite>
+    <sprite>sprites\spr_event_1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +33,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_gold_deck</object>
+    <object>objects\obj_draw_pile</object>
     <object>objects\obj_gold_card</object>
     <object>objects\obj_drag_controller</object>
     <object>objects\obj_event_deck</object>

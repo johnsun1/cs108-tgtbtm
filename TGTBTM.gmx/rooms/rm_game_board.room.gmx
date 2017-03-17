@@ -65,6 +65,7 @@
     <instance objName="obj_attack_menu" x="544" y="608" name="inst_9B674A0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu_controller" x="544" y="544" name="inst_FC89E1A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fame" x="896" y="64" name="inst_3E595F50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_draw_pile" x="64" y="320" name="inst_4D243FF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
