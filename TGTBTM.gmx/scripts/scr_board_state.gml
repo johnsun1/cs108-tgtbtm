@@ -1,5 +1,5 @@
 /// Check for last man standing victory
-if (global.p1_health > 0 && global.p2_health == 0 && global.p3_health == 0) {
+if (global.p1_health > 0 && (global.p2_health == 0 || global.p2_health < 0) && global.p3_health == 0) {
     /// Player 1 has won
     room_goto(rm_end_game);
 } else if (global.p1_health == 0 && global.p2_health > 0 && global.p3_health == 0) {

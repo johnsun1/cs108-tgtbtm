@@ -55,7 +55,8 @@ text = "Attack";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// destroy all menu items 
+            <string>///Create a drop-down menu when the button is clicked
+// destroy all menu items 
 if (instance_exists(obj_attack_menu_item)) {
     with (obj_attack_menu_item) {
         instance_destroy();

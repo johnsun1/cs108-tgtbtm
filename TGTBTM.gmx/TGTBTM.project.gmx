@@ -17,7 +17,10 @@
     <sprite>sprites\spr_player_2_class</sprite>
     <sprite>sprites\spr_player_3_class</sprite>
     <sprite>sprites\spr_title_2</sprite>
+    <sprite>sprites\spr_tooltip</sprite>
+    <sprite>sprites\spr_empty_card</sprite>
     <sprite>sprites\spr_event_1</sprite>
+    <sprite>sprites\spr_event_2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -36,8 +39,8 @@
     <object>objects\obj_draw_pile</object>
     <object>objects\obj_gold_card</object>
     <object>objects\obj_drag_controller</object>
-    <object>objects\obj_event_deck</object>
     <object>objects\obj_monster_deck</object>
+    <object>objects\obj_event_deck</object>
     <object>objects\obj_event_card</object>
     <object>objects\obj_monster_card</object>
     <object>objects\obj_button</object>
@@ -56,6 +59,8 @@
     <object>objects\obj_monster_title</object>
     <object>objects\obj_attack_menu_item</object>
     <object>objects\obj_menu_controller</object>
+    <object>objects\obj_tooltip</object>
+    <object>objects\obj_current_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>

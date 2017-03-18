@@ -135,6 +135,19 @@ switch(action) {
         script_execute(scr_board_state);
         break;
     case 16:
+        //Player has chosen to play an event card
+        
+        //Remove previous event card
+        with (obj_event_card)
+        {
+            instance_destroy();
+        }
+        
+        //Remove card from event card pile
+        card = ds_stack_pop(global.event_deck);
+        
+        //Display card on table
+        displaycard = instance_create(192,320,card);
         break;
 }
 </string>
