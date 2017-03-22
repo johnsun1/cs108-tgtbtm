@@ -212,10 +212,6 @@ switch(action) {
             instance_destroy();
         }
         
-        with(obj_gold_card) {
-            instance_destroy();
-        }
-        
         //Remove card from event card pile
         card = ds_stack_pop(global.event_deck);
         
