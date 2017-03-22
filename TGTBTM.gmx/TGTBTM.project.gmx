@@ -21,15 +21,18 @@
     <sprite>sprites\spr_empty_card</sprite>
     <sprite>sprites\spr_event_1</sprite>
     <sprite>sprites\spr_event_2</sprite>
+    <sprite>sprites\spr_monster_1</sprite>
+    <sprite>sprites\spr_monster_2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_attack.gml</script>
     <script>scripts\scr_setup_new_game.gml</script>
     <script>scripts\scr_board_state.gml</script>
     <script>scripts\scr_event.gml</script>
     <script>scripts\scr_monsters.gml</script>
+    <script>scripts\scr_gold.gml</script>
+    <script>scripts\scr_attack.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_button</font>
@@ -61,6 +64,9 @@
     <object>objects\obj_menu_controller</object>
     <object>objects\obj_tooltip</object>
     <object>objects\obj_current_player</object>
+    <object>objects\obj_end_title</object>
+    <object>objects\obj_group_loot</object>
+    <object>objects\obj_event_monster_pile_title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>

@@ -52,16 +52,15 @@ owner = 0;
             <kind>1</kind>
             <string>///Do something when a menu item is clicked
 
-if (other.text == "Player 1") {
+if (string_pos("Player 1", other.text) &gt; 0) {
         attacker = "None"; //Place holder for identity of attacker
         attack_roll = 0;
-        target_roll = irandom_range(1,global.p1_attack); //Player 1 is the defender
-        //Attacker takes damage
+        target_roll = irandom_range(1,6); //Player 1 is the defender
         if (global.current_player == 2) {
-            attacker_roll = irandom_range(1, global.p2_attack); //Player 2 is the attacker
+            attacker_roll = irandom_range(1, 6); //Player 2 is the attacker
             attacker = "p2";
         } else if (global.current_player == 3) {
-            attacker_roll = irandom_range(1, global.p3_attack); //Player 3 is the attacker
+            attacker_roll = irandom_range(1, 6); //Player 3 is the attacker
             attacker = "p3";
         }
         
@@ -69,61 +68,73 @@ if (other.text == "Player 1") {
         if (target_roll &gt; attacker_roll) {
             //Attacker takes damage
             if (attacker == "p2") {
-                global.p2_health -= abs(target_roll - attacker_roll);
-            } else {
-                global.p3_health -= abs(target_roll - attacker_roll);
+                global.p2_health -= target_roll+global.p1_attack;
+            } else if (attacker == "p3") {
+                global.p3_health -= target_roll+global.p1_attack;
             }
         } else {
             //Defender takes damage
-            global.p1_health -= abs(target_roll - attacker_roll);
+            if (attacker == "p2") {
+                global.p1_health -= attack_roll + global.p2_attack;
+            } else {
+                global.p1_health -= attack_roll + global.p3_attack;
+            }
         }
-} else if (other.text == "Player 2") {
-        attacker = "None";
+} else if (string_pos("Player 2", other.text) &gt; 0) {
+        attacker = "None"; //Place holder for identity of attacker
         attack_roll = 0;
-        target_roll = irandom_range(1,global.p2_attack); //Player 2 is the defender
-        //Attacker takes damage
+        target_roll = irandom_range(1,6); //Player 2 is the defender
         if (global.current_player == 1) {
-            attacker_roll = irandom_range(1, global.p1_attack); //Player 1 is the attacker
+            attacker_roll = irandom_range(1, 6); //Player 1 is the attacker
             attacker = "p1";
         } else if (global.current_player == 3) {
-            attacker_roll = irandom_range(1, global.p3_attack); //Player 3 is the attacker
+            attacker_roll = irandom_range(1, 6); //Player 3 is the attacker
             attacker = "p3";
         }
+        
         // Determine who takes how much damage
         if (target_roll &gt; attacker_roll) {
             //Attacker takes damage
             if (attacker == "p1") {
-                global.p1_health -= abs(target_roll - attacker_roll);
-            } else {
-                global.p3_health -= abs(target_roll - attacker_roll);
+                global.p1_health -= target_roll+global.p2_attack;
+            } else if (attacker == "p3"){
+                global.p3_health -= target_roll+global.p2_attack;
             }
         } else {
             //Defender takes damage
-            global.p2_health -= abs(target_roll - attacker_roll);
+            if (attacker == "p1") {
+                global.p2_health -= attack_roll + global.p1_attack;
+            } else {
+                global.p2_health -= attack_roll + global.p3_attack;
+            }
         }
-} else if (other.text == "Player 3") {
-        attacker = "None";
-        attacker_roll = 0;
-        target_roll = irandom_range(1, global.p3_attack); //Player 3 is the defender
-        // Attacker takes damage
-        if (global.current_player == 2) {
-            attacker_roll = irandom_range(1, global.p2_attack); //Player 2 is the attacker
+} else if (string_pos("Player 3", other.text) &gt; 0) {
+        attacker = "None"; //Place holder for identity of attacker
+        attack_roll = 0;
+        target_roll = irandom_range(1,6); //Player 3 is the defender
+        if (global.current_player == 1) {
+            attacker_roll = irandom_range(1, 6); //Player 1 is the attacker
+            attacker = "p1";
+        } else if (global.current_player == 2) {
+            attacker_roll = irandom_range(1, 6); //Player 2 is the attacker
             attacker = "p2";
-        } else if (global.current_player == 3) {
-            attacker_roll = irandom_range(1, global.p1_attack); //Player 1 is the attacker
-            attacker = "p3";
         }
+        
         // Determine who takes how much damage
         if (target_roll &gt; attacker_roll) {
             //Attacker takes damage
-            if (attacker == "p2") {
-                global.p2_health -= abs(target_roll - attacker_roll);
+            if (attacker == "p1") {
+                global.p1_health -= target_roll+global.p3_attack;
             } else {
-                global.p1_health -= abs(target_roll - attacker_roll);
+                global.p2_health -= target_roll+global.p3_attack;
             }
         } else {
             //Defender takes damage
-            global.p3_health -= abs(target_roll - attacker_roll);
+            if (attacker == "p1") {
+                global.p3_health -= attack_roll + global.p1_attack;
+            } else {
+                global.p3_health -= attack_roll + global.p2_attack;
+            }
         }
 }
 

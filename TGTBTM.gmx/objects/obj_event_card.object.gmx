@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>///Choose a sprite
 sprite_index = choose(spr_event_1, spr_event_2);
-text = "";
-image_speed = 0;
-owner = 0;
+//text = "";
+//image_speed = 0;
+//owner = 0;
+
+global.drawn_event_card = sprite_index;
 </string>
           </argument>
         </arguments>
