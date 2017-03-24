@@ -10,7 +10,9 @@
     <sprite>sprites\spr_gold_10</sprite>
     <sprite>sprites\spr_gold_5</sprite>
     <sprite>sprites\spr_gold_0</sprite>
-    <sprite>sprites\spr_deck</sprite>
+    <sprite>sprites\spr_gold_deck</sprite>
+    <sprite>sprites\spr_event_deck</sprite>
+    <sprite>sprites\spr_monster_deck</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_player_1_class</sprite>
@@ -23,6 +25,7 @@
     <sprite>sprites\spr_event_2</sprite>
     <sprite>sprites\spr_monster_1</sprite>
     <sprite>sprites\spr_monster_2</sprite>
+    <sprite>sprites\spr_title_screen</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -67,6 +70,7 @@
     <object>objects\obj_end_title</object>
     <object>objects\obj_group_loot</object>
     <object>objects\obj_event_monster_pile_title</object>
+    <object>objects\obj_main_title_graphic</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>

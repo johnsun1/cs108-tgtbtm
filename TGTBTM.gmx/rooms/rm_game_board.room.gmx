@@ -51,8 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_gold_deck" x="544" y="320" name="inst_B9AC8837" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_monster_deck" x="704" y="320" name="inst_9B5ADA88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_button" x="384" y="480" name="inst_478F8051" locked="0" code="text = &quot;Event&quot;&#xA;action = 16;" scaleX="0.5" scaleY="0.510204076766968" colour="4294967295" rotation="0"/>
     <instance objName="obj_button" x="704" y="480" name="inst_3FF5E2B2" locked="0" code="text = &quot;End Turn&quot;;&#xA;action = 15;" scaleX="0.5" scaleY="0.489795923233032" colour="4294967295" rotation="0"/>
     <instance objName="obj_class" x="128" y="64" name="inst_BEC914E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -65,9 +63,11 @@
     <instance objName="obj_menu_controller" x="928" y="640" name="inst_FC89E1A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fame" x="704" y="64" name="inst_3E595F50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_current_player" x="256" y="160" name="inst_D925EEAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_event_deck" x="384" y="320" name="inst_F8372E59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_group_loot" x="864" y="416" name="inst_7E506AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_event_monster_pile_title" x="192" y="416" name="inst_42B0F207" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_gold_deck" x="704" y="320" name="inst_CC5B90A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_event_deck" x="384" y="320" name="inst_3DD7D474" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_monster_deck" x="544" y="320" name="inst_A7EE5612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
