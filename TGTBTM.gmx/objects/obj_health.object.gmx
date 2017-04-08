@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>if (global.current_player == 1) {
-    draw_text(416, 64, "Health: "+ string(global.p1_health));
+    draw_text(136, 690, "Health: "+ string(global.p1_health));
 } else if (global.current_player == 2) {
-    draw_text(416, 64, "Health: " + string(global.p2_health));
+    draw_text(136, 690, "Health: " + string(global.p2_health));
 } else if (global.current_player == 3) { 
-    draw_text(416, 64, "Health: " + string(global.p3_health));
+    draw_text(136, 690, "Health: " + string(global.p3_health));
 }
 </string>
           </argument>

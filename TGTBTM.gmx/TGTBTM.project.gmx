@@ -26,6 +26,13 @@
     <sprite>sprites\spr_monster_1</sprite>
     <sprite>sprites\spr_monster_2</sprite>
     <sprite>sprites\spr_title_screen</sprite>
+    <sprite>sprites\spr_game_board_background</sprite>
+    <sprite>sprites\spr_player_health</sprite>
+    <sprite>sprites\spr_player_portrait</sprite>
+    <sprite>sprites\spr_banker</sprite>
+    <sprite>sprites\spr_assassin</sprite>
+    <sprite>sprites\spr_knight</sprite>
+    <sprite>sprites\spr_banker_title</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -51,6 +58,7 @@
     <object>objects\obj_monster_card</object>
     <object>objects\obj_button</object>
     <object>objects\obj_attack_menu</object>
+    <object>objects\obj_player_select</object>
     <object>objects\obj_title</object>
     <object>objects\obj_player_1_class</object>
     <object>objects\obj_player_2_class</object>
@@ -64,6 +72,7 @@
     <object>objects\obj_event_title</object>
     <object>objects\obj_monster_title</object>
     <object>objects\obj_attack_menu_item</object>
+    <object>objects\obj_player_select_item</object>
     <object>objects\obj_menu_controller</object>
     <object>objects\obj_tooltip</object>
     <object>objects\obj_current_player</object>
@@ -71,6 +80,12 @@
     <object>objects\obj_group_loot</object>
     <object>objects\obj_event_monster_pile_title</object>
     <object>objects\obj_main_title_graphic</object>
+    <object>objects\obj_game_board_background</object>
+    <object>objects\obj_player_portrait</object>
+    <object>objects\obj_player_health_bar</object>
+    <object>objects\obj_knight</object>
+    <object>objects\obj_assassin</object>
+    <object>objects\obj_banker</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>

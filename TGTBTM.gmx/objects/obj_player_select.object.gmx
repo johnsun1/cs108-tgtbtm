@@ -28,19 +28,16 @@
             <string>/// Create menu object
 
 //Initialize attack menu
-global.attack_menu = ds_list_create();
+global.player_select = ds_list_create();
 
-if (global.p2_clicked &amp;&amp; global.p3_clicked) {
-//There are three players
-ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health), "Player 3: " + string(global.p3_health));
-} else if (!global.p2_clicked) {
-ds_list_add(global.attack_menu, "Player 3: " + string(global.p3_health));
-} else if (!global.p3_clicked) {
-ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health));
-}
+ds_list_add(global.player_select, "Player 1", "Player 2", "Player 3");
+
     
 image_speed = 0;
-text = "Attack";
+text = "Player Menu";
+
+//By default, player 1 is chosing their character
+global.current_choice = 1;
 </string>
           </argument>
         </arguments>
@@ -137,17 +134,17 @@ image_index = 2;
 
 ///Create a drop-down menu when the button is clicked
 // destroy all menu items 
-if (instance_exists(obj_attack_menu_item)) {
-    with (obj_attack_menu_item) {
+if (instance_exists(obj_player_select_item)) {
+    with (obj_player_select_item) {
         instance_destroy();
     }
 } else {   
     // create menu items
     var yIncrement = sprite_get_height(spr_button);
     var yy = y + yIncrement-2;
-    for (var i = 0; i &lt; ds_list_size(global.attack_menu); i++) {
-        var item = instance_create(x, yy, obj_attack_menu_item);
-        item.text = ds_list_find_value(global.attack_menu, i);
+    for (var i = 0; i &lt; ds_list_size(global.player_select); i++) {
+        var item = instance_create(x, yy, obj_player_select_item);
+        item.text = ds_list_find_value(global.player_select, i);
         item.owner = id; // this is the link between this menu item and the menu
         yy += yIncrement-2;
     }
@@ -174,7 +171,7 @@ if (instance_exists(obj_attack_menu_item)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ds_list_destroy(global.attack_menu);
+            <string>ds_list_destroy(global.player_select);
 </string>
           </argument>
         </arguments>

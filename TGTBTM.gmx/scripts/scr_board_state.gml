@@ -41,17 +41,17 @@ if (global.p1_rep >= 15 && global.p1_class == "Knight") {
 }
 
 // Check for gold victory
-if (global.p1_gold >= 40) {
+if (global.p1_gold >= 60) {
     //Player 1 has won a gold victory
     global.winner = "Player 1";
     global.win_type = "Gold";
     room_goto(rm_end_game);
-} else if (global.p2_gold >= 40) {
+} else if (global.p2_gold >= 60) {
     //Player 2 has won a gold victory
     global.winner = "Player 2";
     global.win_type = "Gold";
     room_goto(rm_end_game);
-} else if (global.p3_gold >= 40) {
+} else if (global.p3_gold >= 60) {
     //Player 3 has won a gold victory
     global.winner = "Player 3";
     global.win_type = "Gold";

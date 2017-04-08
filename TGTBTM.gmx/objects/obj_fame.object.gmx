@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>if (global.current_player == 1) {
-    draw_text(896, 64, "Fame: " + string(global.p1_rep));
+    draw_text(239,690, "Fame: " + string(global.p1_rep));
 } else if (global.current_player == 2) {
-    draw_text(896, 64, "Fame: " + string(global.p2_rep));
+    draw_text(239,690, "Fame: " + string(global.p2_rep));
 } else if (global.current_player == 3) {
-    draw_text(896, 64, "Fame: " + string(global.p3_rep));
+    draw_text(239,690, "Fame: " + string(global.p3_rep));
 }
 </string>
           </argument>

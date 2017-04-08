@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>if (global.current_player == 1) {
-    draw_text(672, 64, "Gold: " + string(global.p1_gold));
+    draw_text(336,690, "Gold: " + string(global.p1_gold));
 } else if (global.current_player == 2) {
-    draw_text(672, 64, "Gold: " + string(global.p2_gold));
+    draw_text(336,690, "Gold: " + string(global.p2_gold));
 } else if (global.current_player == 3) {
-    draw_text(672, 64, "Gold: " + string(global.p3_gold));
+    draw_text(336,690, "Gold: " + string(global.p3_gold));
 }
 </string>
           </argument>

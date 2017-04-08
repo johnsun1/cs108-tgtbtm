@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>if (global.current_player == 1) {
-    draw_text(128, 64, "Class: " + global.p1_class);
+    draw_text(234, 640, global.p1_class);
 } else if (global.current_player == 2) {
-    draw_text(128, 64, "Class: " + global.p2_class);
+    draw_text(234, 640, global.p2_class);
 } else if (global.current_player == 3) {
-    draw_text(128, 64, "Class: " + global.p3_class);
+    draw_text(234, 640, global.p3_class);
 }
 </string>
           </argument>

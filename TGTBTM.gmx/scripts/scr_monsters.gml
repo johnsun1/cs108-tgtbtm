@@ -13,7 +13,7 @@ with(obj_monster_card) {
 card = ds_stack_pop(global.monster_deck);
         
 //Display card on the table
-displaycard = instance_create(192,320,card);
+displaycard = instance_create(125,406,card);
         
 //Do something, depending on which card was drawn
 if (global.drawn_monster_card == spr_monster_1) {
