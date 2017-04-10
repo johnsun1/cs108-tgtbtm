@@ -10,7 +10,7 @@ with(obj_gold_card) {
 card = ds_stack_pop(global.gold_deck);
         
 //Display card on the table
-displaycard = instance_create(215,406,card);
+displaycard = instance_create(510,150,card);
         
 //Do something, depending on which card was drawn
 if (global.drawn_gold_card == spr_gold_0) {

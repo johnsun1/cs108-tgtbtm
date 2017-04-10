@@ -107,9 +107,12 @@ if (string_pos("Player 1", other.text) &gt; 0) {
     global.current_choice = 3;
 }
 
-with (obj_player_select_item)
-{
+with (obj_player_select_item) {
     instance_destroy();
+}
+
+with(obj_player_select){
+    text = other.text;
 }
 </string>
           </argument>

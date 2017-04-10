@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_card_back</sprite>
     <sprite>sprites\spr_gold_10</sprite>
     <sprite>sprites\spr_gold_5</sprite>
     <sprite>sprites\spr_gold_0</sprite>
@@ -15,17 +14,14 @@
     <sprite>sprites\spr_monster_deck</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_player_1_class</sprite>
-    <sprite>sprites\spr_player_2_class</sprite>
-    <sprite>sprites\spr_player_3_class</sprite>
     <sprite>sprites\spr_title_2</sprite>
     <sprite>sprites\spr_tooltip</sprite>
     <sprite>sprites\spr_empty_card</sprite>
     <sprite>sprites\spr_event_1</sprite>
     <sprite>sprites\spr_event_2</sprite>
+    <sprite>sprites\spr_title_screen</sprite>
     <sprite>sprites\spr_monster_1</sprite>
     <sprite>sprites\spr_monster_2</sprite>
-    <sprite>sprites\spr_title_screen</sprite>
     <sprite>sprites\spr_game_board_background</sprite>
     <sprite>sprites\spr_player_health</sprite>
     <sprite>sprites\spr_player_portrait</sprite>
@@ -60,25 +56,11 @@
     <object>objects\obj_attack_menu</object>
     <object>objects\obj_player_select</object>
     <object>objects\obj_title</object>
-    <object>objects\obj_player_1_class</object>
-    <object>objects\obj_player_2_class</object>
-    <object>objects\obj_player_3_class</object>
     <object>objects\obj_title_2</object>
-    <object>objects\obj_class</object>
-    <object>objects\obj_health</object>
-    <object>objects\obj_gold</object>
-    <object>objects\obj_fame</object>
-    <object>objects\obj_gold_title</object>
-    <object>objects\obj_event_title</object>
-    <object>objects\obj_monster_title</object>
     <object>objects\obj_attack_menu_item</object>
     <object>objects\obj_player_select_item</object>
     <object>objects\obj_menu_controller</object>
-    <object>objects\obj_tooltip</object>
-    <object>objects\obj_current_player</object>
     <object>objects\obj_end_title</object>
-    <object>objects\obj_group_loot</object>
-    <object>objects\obj_event_monster_pile_title</object>
     <object>objects\obj_main_title_graphic</object>
     <object>objects\obj_game_board_background</object>
     <object>objects\obj_player_portrait</object>

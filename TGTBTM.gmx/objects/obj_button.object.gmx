@@ -209,6 +209,7 @@ switch(action) {
         global.current_health = 20;
         room_goto(rm_game_board);
         break;
+        
     case 14:
         /// Return to the game lobby
         room_goto(rm_main_title);
@@ -307,7 +308,7 @@ switch(action) {
         card = ds_stack_pop(global.event_deck);
         
         //Display card on table
-        displaycard = instance_create(215,406,card);
+        displaycard = instance_create(130,440,card);
 
         script_execute(scr_event);
         break;
