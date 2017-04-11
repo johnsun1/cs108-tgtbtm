@@ -33,10 +33,15 @@ global.attack_menu = ds_list_create();
 if (global.p2_clicked &amp;&amp; global.p3_clicked) {
 //There are three players
 ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health), "Player 3: " + string(global.p3_health));
+
 } else if (!global.p2_clicked) {
+//There is no player 2
 ds_list_add(global.attack_menu, "Player 3: " + string(global.p3_health));
+
 } else if (!global.p3_clicked) {
+//There is no player 3
 ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health));
+
 }
     
 image_speed = 0;

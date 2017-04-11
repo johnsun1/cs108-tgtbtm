@@ -1,5 +1,6 @@
 ///Set up new game
-
+global.rand_event = 0; //default roll value
+        
 //Check how many players are playing
 if (!global.p1_clicked) {
     //No player in slot 1, set dummy values

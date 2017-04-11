@@ -6,19 +6,14 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_gold_10</sprite>
-    <sprite>sprites\spr_gold_5</sprite>
-    <sprite>sprites\spr_gold_0</sprite>
     <sprite>sprites\spr_gold_deck</sprite>
     <sprite>sprites\spr_event_deck</sprite>
     <sprite>sprites\spr_monster_deck</sprite>
     <sprite>sprites\spr_button</sprite>
-    <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_title_2</sprite>
-    <sprite>sprites\spr_tooltip</sprite>
     <sprite>sprites\spr_empty_card</sprite>
     <sprite>sprites\spr_event_1</sprite>
     <sprite>sprites\spr_event_2</sprite>
+    <sprite>sprites\spr_event_3</sprite>
     <sprite>sprites\spr_title_screen</sprite>
     <sprite>sprites\spr_monster_1</sprite>
     <sprite>sprites\spr_monster_2</sprite>
@@ -28,7 +23,17 @@
     <sprite>sprites\spr_banker</sprite>
     <sprite>sprites\spr_assassin</sprite>
     <sprite>sprites\spr_knight</sprite>
-    <sprite>sprites\spr_banker_title</sprite>
+    <sprite>sprites\spr_gold_0</sprite>
+    <sprite>sprites\spr_gold_1</sprite>
+    <sprite>sprites\spr_gold_2</sprite>
+    <sprite>sprites\spr_gold_3</sprite>
+    <sprite>sprites\spr_gold_4</sprite>
+    <sprite>sprites\spr_gold_5</sprite>
+    <sprite>sprites\spr_gold_6</sprite>
+    <sprite>sprites\spr_gold_7</sprite>
+    <sprite>sprites\spr_gold_8</sprite>
+    <sprite>sprites\spr_gold_9</sprite>
+    <sprite>sprites\spr_gold_10</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -55,8 +60,6 @@
     <object>objects\obj_button</object>
     <object>objects\obj_attack_menu</object>
     <object>objects\obj_player_select</object>
-    <object>objects\obj_title</object>
-    <object>objects\obj_title_2</object>
     <object>objects\obj_attack_menu_item</object>
     <object>objects\obj_player_select_item</object>
     <object>objects\obj_menu_controller</object>
@@ -68,6 +71,9 @@
     <object>objects\obj_knight</object>
     <object>objects\obj_assassin</object>
     <object>objects\obj_banker</object>
+    <object>objects\obj_player_stats</object>
+    <object>objects\obj_player_roll</object>
+    <object>objects\obj_other_players</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>

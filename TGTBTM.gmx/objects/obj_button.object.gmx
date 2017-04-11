@@ -300,7 +300,7 @@ switch(action) {
             instance_destroy();
         }
         
-        with(obj_gold_card) {
+        with (obj_monster_card) {
             instance_destroy();
         }
         

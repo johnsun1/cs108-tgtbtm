@@ -101,10 +101,13 @@ image_index = 2;
 if (string_pos("Player 1", other.text) &gt; 0) {
     //Player 1 selected
     global.current_choice = 1;
+    global.p1_clicked = true;
 } else if (string_pos("Player 2", other.text) &gt; 0) {
     global.current_choice = 2;
+    global.p2_clicked = true;
 } else if (string_pos("Player 3", other.text) &gt; 0) {
     global.current_choice = 3;
+    global.p3_clicked = true;
 }
 
 with (obj_player_select_item) {

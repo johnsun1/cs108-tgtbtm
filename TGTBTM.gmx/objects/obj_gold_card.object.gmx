@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Choose a sprite
-sprite_index = choose(spr_gold_0, spr_gold_5, spr_gold_10);
+sprite_index = choose(spr_gold_0, spr_gold_1, spr_gold_2, spr_gold_3, spr_gold_4, spr_gold_5, spr_gold_6, spr_gold_7, spr_gold_8, spr_gold_9, spr_gold_10);
 
 global.drawn_gold_card = sprite_index;
 </string>

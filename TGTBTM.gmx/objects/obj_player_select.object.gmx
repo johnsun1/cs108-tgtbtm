@@ -34,10 +34,7 @@ ds_list_add(global.player_select, "Player 1", "Player 2", "Player 3");
 
     
 image_speed = 0;
-text = "Player Menu";
-
-//By default, player 1 is chosing their character
-global.current_choice = 1;
+text = "Select a player";
 </string>
           </argument>
         </arguments>

@@ -61,36 +61,31 @@ if (global.p1_gold >= 60) {
 // Update attack menu choices
 global.attack_menu = ds_list_create();
  
+//Assume there are three players
 if (global.current_player == 1) {
-    if (global.p2_clicked && global.p3_clicked) {
-    //There are three players
-        ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health), "Player 3: " + string(global.p3_health));
-    } else if (!global.p2_clicked) {
-        ds_list_add(global.attack_menu, "Player 3: " + string(global.p3_health));
-    } else if (!global.p3_clicked) {
+    //Check other players for health
+    if (global.p2_health > 0) {
         ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health));
     }
-
+    if (global.p3_health > 0) {
+        ds_list_add(global.attack_menu, "Player 3: " + string(global.p3_health));
+    } 
 } else if (global.current_player == 2) {
-    if (global.p1_clicked && global.p3_clicked) {
-    //There are three players
-        ds_list_add(global.attack_menu, "Player 1: " + string(global.p1_health), "Player 3: " + string(global.p3_health));
-    } else if (!global.p1_clicked) {
+    //Check other players for health
+    if (global.p1_health > 0) {
+        ds_list_add(global.attack_menu, "Player 1: " + string(global.p1_health));
+    } 
+    if (global.p3_health > 0) {
         ds_list_add(global.attack_menu, "Player 3: " + string(global.p3_health));
-    } else if (!global.p3_clicked) {
+    } 
+} else if (global.current_player == 3) {
+    //Check other players for health
+    if (global.p1_health > 0) {
         ds_list_add(global.attack_menu, "Player 1: " + string(global.p1_health));
     }
-
-} else {
-    if (global.p1_clicked && global.p2_clicked) {
-    //There are three players
-        ds_list_add(global.attack_menu, "Player 1: " + string(global.p1_health), "Player 2: " + string(global.p2_health));
-    } else if (!global.p1_clicked) {
+    if (global.p2_health > 0) {
         ds_list_add(global.attack_menu, "Player 2: " + string(global.p2_health));
-    } else if (!global.p2_clicked) {
-        ds_list_add(global.attack_menu, "Player 1: " + string(global.p1_health));
-    }
-
+    } 
 }
 
 
