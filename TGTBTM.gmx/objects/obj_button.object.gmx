@@ -105,18 +105,11 @@ image_index = 1;
 /// Determine button actions
 switch(action) {
     case 0:
-        /// Goto the create game menu from the main title page
-        global.p1_clicked = false;
-        global.p2_clicked = false;
-        global.p3_clicked = false;
-        
-        global.current_class = "None";
-        global.current_health = 20;
-        
         room_goto(rm_create_game);
         break;
 
     case 13:
+        if (global.p1_class != "None" &amp;&amp; global.p2_class != "None" &amp;&amp; global.p3_class != "None") {
         /// Start the game
         script_execute(scr_setup_new_game);
         script_execute(scr_board_state);
@@ -125,7 +118,17 @@ switch(action) {
         
         global.current_class = global.p1_class; //Set the current class to player 1's class
         global.current_health = 20;
+        
+        //Stop game menu background music
+        audio_stop_sound(snd_game_menu_bg);
+        
+        //Start looping background music
+        audio_play_sound(snd_game_board_bg, 0,true);
+        
         room_goto(rm_game_board);
+        } else {
+            //Do nothing for now
+        }
         break;
         
     case 14:
@@ -230,7 +233,12 @@ switch(action) {
     break;
     
     case 25:
+        //Stop old background music
+        audio_stop_sound(snd_game_board_bg);
         room_goto(rm_main_title);
+        
+        //Start game menu background music
+        audio_play_sound(snd_game_menu_bg, 0 ,true);
         break;
 }
 </string>

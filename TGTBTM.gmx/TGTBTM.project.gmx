@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_game_board_bg</sound>
+    <sound>sound\snd_game_menu_bg</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_gold_deck</sprite>
     <sprite>sprites\spr_event_deck</sprite>
@@ -76,6 +79,7 @@
     <object>objects\obj_player_roll</object>
     <object>objects\obj_other_players</object>
     <object>objects\obj_tutorial_image</object>
+    <object>objects\obj_player_selection</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>
