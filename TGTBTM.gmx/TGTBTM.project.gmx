@@ -14,6 +14,7 @@
     <sprite>sprites\spr_event_1</sprite>
     <sprite>sprites\spr_event_2</sprite>
     <sprite>sprites\spr_event_3</sprite>
+    <sprite>sprites\spr_monster_3</sprite>
     <sprite>sprites\spr_title_screen</sprite>
     <sprite>sprites\spr_monster_1</sprite>
     <sprite>sprites\spr_monster_2</sprite>
@@ -34,6 +35,7 @@
     <sprite>sprites\spr_gold_8</sprite>
     <sprite>sprites\spr_gold_9</sprite>
     <sprite>sprites\spr_gold_10</sprite>
+    <sprite>sprites\spr_tutorial_image</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -71,15 +73,16 @@
     <object>objects\obj_knight</object>
     <object>objects\obj_assassin</object>
     <object>objects\obj_banker</object>
-    <object>objects\obj_player_stats</object>
     <object>objects\obj_player_roll</object>
     <object>objects\obj_other_players</object>
+    <object>objects\obj_tutorial_image</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_title</room>
     <room>rooms\rm_create_game</room>
     <room>rooms\rm_game_board</room>
     <room>rooms\rm_end_game</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

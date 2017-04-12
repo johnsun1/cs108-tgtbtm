@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Choose a sprite
-sprite_index = choose(spr_monster_1, spr_monster_2);
+sprite_index = choose(spr_monster_1, spr_monster_2, spr_monster_3);
 
 global.drawn_monster_card = sprite_index;
 </string>

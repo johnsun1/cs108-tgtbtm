@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>image_speed = 0;
 image_index = 0;
+
+//Select player 1 by default to prevent crashing
+global.current_choice = 1;
+        
 </string>
           </argument>
         </arguments>
@@ -105,106 +109,20 @@ switch(action) {
         global.p1_clicked = false;
         global.p2_clicked = false;
         global.p3_clicked = false;
+        
         global.current_class = "None";
         global.current_health = 20;
+        
         room_goto(rm_create_game);
-        break;
-    case 1:
-        /// Player 1 is a Knight
-        global.p1_id = 1;
-        global.p1_class = "Knight";
-        global.p1_health = 20;
-        global.p1_attack = 5;
-        global.p1_gold = 5;
-        global.p1_rep = 0;
-        global.p1_clicked = true;
-        break;
-    case 2:
-        /// Player 1 is a Banker
-        global.p1_id = 1;
-        global.p1_class = "Banker";
-        global.p1_health = 20;
-        global.p1_attack = 5;
-        global.p1_gold = 5;
-        global.p1_rep = 0;
-        global.p1_clicked = true;
-        break;
-    case 3:
-        /// Player 1 is an Assassin
-        global.p1_id = 1;
-        global.p1_class = "Assassin";
-        global.p1_health = 20;
-        global.p1_attack = 8;
-        global.p1_gold = 5;
-        global.p1_rep = 0;
-        global.p1_clicked = true;
-        break;
-    case 5:
-        /// Player 2 is a Knight
-        global.p2_id = 2;
-        global.p2_class = "Knight";
-        global.p2_health = 20;
-        global.p2_attack = 5;
-        global.p2_gold = 5;
-        global.p2_rep = 0;
-        global.p2_clicked = true;
-        break;
-    case 6:
-        /// Player 2 is a Banker
-        global.p2_id = 2;
-        global.p2_class = "Banker";
-        global.p2_health = 20;
-        global.p2_attack = 5;
-        global.p2_gold = 5;
-        global.p2_rep = 0;
-        global.p2_clicked = true;
-        break;
-    case 7:
-        /// Player 2 is an Assassin
-        global.p2_id = 2;
-        global.p2_class = "Assassin";
-        global.p2_health = 20;
-        global.p2_attack = 8;
-        global.p2_gold = 5;
-        global.p2_rep = 0;
-        global.p2_clicked = true;
-        break;
-
-    case 9:
-        /// Player 3 is a Knight
-        global.p3_id = 3;
-        global.p3_class = "Knight";
-        global.p3_health = 20;
-        global.p3_attack = 5;
-        global.p3_gold = 5;
-        global.p3_rep = 0;
-        global.p3_clicked = true;
-        break;
-    case 10:
-        /// Player 3 is a Banker
-        global.p3_id = 3;
-        global.p3_class = "Banker";
-        global.p3_health = 20;
-        global.p3_attack = 5;
-        global.p3_gold = 5;
-        global.p3_rep = 0;
-        global.p3_clicked = true;
-        break;
-    case 11:
-        /// Player 3 is an Assassin
-        global.p3_id = 3;
-        global.p3_class = "Assassin";
-        global.p3_health = 20;
-        global.p3_attack = 8;
-        global.p3_gold = 5;
-        global.p3_rep = 0;
-        global.p3_clicked = true;
         break;
 
     case 13:
         /// Start the game
         script_execute(scr_setup_new_game);
         script_execute(scr_board_state);
+        global.pvp_flag = false; //There's no pvp at the beginning
+        global.beast_event = false; //No beast event yet
+        
         global.current_class = global.p1_class; //Set the current class to player 1's class
         global.current_health = 20;
         room_goto(rm_game_board);
@@ -250,45 +168,35 @@ switch(action) {
                 global.current_health = global.p1_health;
                 global.current_class = global.p1_class;
                 global.current_player = 1;
+                
+            //Initiate beast attack event
+            script_execute(scr_monsters);
             }
         } else if (global.current_player == 3) {
-        
         //Check if next player has non-zero health
             if (global.p1_health &gt; 0) { 
                  global.current_class = global.p1_class;
                  global.current_health = global.p1_health;
                  global.current_player = 1;
+                 
+            //Initiate beast attack event
+            script_execute(scr_monsters);
              } else {
                 //If not, skip to next player
                  global.current_class = global.p2_class;
                  global.current_health = global.p2_health;
                  global.current_player = 2;
-             }
+                 
+            //Initiate beast attack event
+            script_execute(scr_monsters);
+            }
         }
         
-
-        //Initiate monster attack and grant loot to group
-        if (!global.p2_clicked) {
-            //There is no player 2, and player 3 is the last player
-            if (global.current_player == 1) {
-                script_execute(scr_monsters);
-                script_execute(scr_gold);
-            }
-        }
-        else if (!global.p3_clicked) { 
-            //There is no player 3, and player 2 is the last player
-            if (global.current_player == 1) {
-                script_execute(scr_monsters);
-                script_execute(scr_gold);
-            }
-        } else {
-            //There are 3 players, and the last player is player 3
-                if (global.current_player == 1) {
-                    script_execute(scr_monsters);
-                    script_execute(scr_gold);
-                }
-        }
-
+        //Reset flags
+        global.pvp_flag = false; 
+        global.rand_event = 0;
+        
+        global.player_roll_msg = ""; //Reset player roll message
         script_execute(scr_board_state);
         break;
         
@@ -310,9 +218,17 @@ switch(action) {
         //Display card on table
         displaycard = instance_create(130,440,card);
 
+        //Clean up beast event flag
+        global.beast_event = false;
+
         script_execute(scr_event);
         break;
         
+    case 20:
+    //Begin tutorial
+    room_goto(rm_tutorial);
+    break;
+    
     case 25:
         room_goto(rm_main_title);
         break;

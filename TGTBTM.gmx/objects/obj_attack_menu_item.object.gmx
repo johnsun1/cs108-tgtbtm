@@ -98,88 +98,82 @@ owner = 0;
             <kind>1</kind>
             <string>///Do something when a menu item is clicked
 image_index = 2;
+
+global.pvp_flag = false;
+attacker = "None"; //Place holder for identity of attacker
+global.attack_roll = irandom_range(1,6);
+global.target_roll = irandom_range(1,6); 
+        
 if (string_pos("Player 1", other.text) &gt; 0) {
-        attacker = "None"; //Place holder for identity of attacker
-        attack_roll = 0;
-        target_roll = irandom_range(1,6); //Player 1 is the defender
+global.pvp_flag = true;
         if (global.current_player == 2) {
-            attacker_roll = irandom_range(1, 6); //Player 2 is the attacker
             attacker = "p2";
         } else if (global.current_player == 3) {
-            attacker_roll = irandom_range(1, 6); //Player 3 is the attacker
             attacker = "p3";
         }
         
         // Determine who takes how much damage
-        if (target_roll &gt; attacker_roll) {
+        if (global.target_roll &gt; global.attack_roll) {
             //Attacker takes damage
             if (attacker == "p2") {
-                global.p2_health -= target_roll+global.p1_attack;
+                global.p2_health -= global.target_roll+global.p1_attack;
             } else if (attacker == "p3") {
-                global.p3_health -= target_roll+global.p1_attack;
+                global.p3_health -= global.target_roll+global.p1_attack;
             }
         } else {
             //Defender takes damage
             if (attacker == "p2") {
-                global.p1_health -= attack_roll + global.p2_attack;
+                global.p1_health -= global.attack_roll + global.p2_attack;
             } else {
-                global.p1_health -= attack_roll + global.p3_attack;
+                global.p1_health -= global.attack_roll + global.p3_attack;
             }
         }
 } else if (string_pos("Player 2", other.text) &gt; 0) {
-        attacker = "None"; //Place holder for identity of attacker
-        attack_roll = 0;
-        target_roll = irandom_range(1,6); //Player 2 is the defender
+global.pvp_flag = true;
         if (global.current_player == 1) {
-            attacker_roll = irandom_range(1, 6); //Player 1 is the attacker
             attacker = "p1";
         } else if (global.current_player == 3) {
-            attacker_roll = irandom_range(1, 6); //Player 3 is the attacker
             attacker = "p3";
         }
         
         // Determine who takes how much damage
-        if (target_roll &gt; attacker_roll) {
+        if (global.target_roll &gt; global.attack_roll) {
             //Attacker takes damage
             if (attacker == "p1") {
-                global.p1_health -= target_roll+global.p2_attack;
+                global.p1_health -= global.target_roll+global.p2_attack;
             } else if (attacker == "p3"){
-                global.p3_health -= target_roll+global.p2_attack;
+                global.p3_health -= global.target_roll+global.p2_attack;
             }
         } else {
             //Defender takes damage
             if (attacker == "p1") {
-                global.p2_health -= attack_roll + global.p1_attack;
+                global.p2_health -= global.attack_roll + global.p1_attack;
             } else {
-                global.p2_health -= attack_roll + global.p3_attack;
+                global.p2_health -= global.attack_roll + global.p3_attack;
             }
         }
 } else if (string_pos("Player 3", other.text) &gt; 0) {
-        attacker = "None"; //Place holder for identity of attacker
-        attack_roll = 0;
-        target_roll = irandom_range(1,6); //Player 3 is the defender
+global.pvp_flag = true;
         if (global.current_player == 1) {
-            attacker_roll = irandom_range(1, 6); //Player 1 is the attacker
             attacker = "p1";
         } else if (global.current_player == 2) {
-            attacker_roll = irandom_range(1, 6); //Player 2 is the attacker
             attacker = "p2";
         }
         
         // Determine who takes how much damage
-        if (target_roll &gt; attacker_roll) {
+        if (global.target_roll &gt; global.attack_roll) {
             //Attacker takes damage
             if (attacker == "p1") {
-                global.p1_health -= target_roll+global.p3_attack;
+                global.p1_health -= global.target_roll+global.p3_attack;
             } else {
-                global.p2_health -= target_roll+global.p3_attack;
+                global.p2_health -= global.target_roll+global.p3_attack;
             }
         } else {
             //Defender takes damage
             if (attacker == "p1") {
-                global.p3_health -= attack_roll + global.p1_attack;
+                global.p3_health -= global.attack_roll + global.p1_attack;
             } else {
-                global.p3_health -= attack_roll + global.p2_attack;
+                global.p3_health -= global.attack_roll + global.p2_attack;
             }
         }
 }
@@ -188,6 +182,9 @@ with (obj_attack_menu_item)
 {
     instance_destroy();
 }
+
+//Clean up beast event flag
+global.beast_event = false;
 </string>
           </argument>
         </arguments>

@@ -25,25 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.player_roll_msg = "";
+            <string>///Display player and opponent roll
 
-if (global.rand_event != 0) {
-    global.player_roll_msg = "You have rolled " + string(global.rand_event) + " for your event roll!"
-    draw_text(x,y,global.player_roll_msg);
-    
-} else if (global.pvp_flag) {
-//If there is combat, show combat rolls
-    global.player_roll_msg = "You attack, rolling " + string(global.attack_roll) + " against the other player's roll of " + string(global.target_roll);
-    draw_text(x,y,global.player_roll_msg);
-    
-} else if (global.beast_event) {
-//Display rolls on screen
-global.player_roll_msg = "Player 1 rolled " + string(global.p1_roll) + " against " + string(global.p1_opfor_roll) +
-                            "#Player 2 rolled " + string(global.p2_roll) + " against " + string(global.p2_opfor_roll) +
-                            "#Player 3 rolled " + string(global.p3_roll) + " against " + string(global.p3_opfor_roll);
-
-    draw_text(x,y,global.player_roll_msg);
-}
 </string>
           </argument>
         </arguments>

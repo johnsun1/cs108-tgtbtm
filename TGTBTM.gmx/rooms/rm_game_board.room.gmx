@@ -59,9 +59,9 @@
     <instance objName="obj_monster_deck" x="530" y="440" name="inst_A7EE5612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_portrait" x="190" y="680" name="inst_8AEAFF3D" locked="0" code="" scaleX="0.675182461738586" scaleY="0.615384638309479" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_health_bar" x="220" y="640" name="inst_A369FF51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_stats" x="710" y="680" name="inst_0503F67B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game_board_background" x="510" y="380" name="inst_1BB8E2EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_roll" x="290" y="630" name="inst_29B2E74A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_game_board_background" x="510" y="390" name="inst_1BB8E2EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_roll" x="780" y="260" name="inst_29B2E74A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_other_players" x="710" y="700" name="inst_40F10C76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
