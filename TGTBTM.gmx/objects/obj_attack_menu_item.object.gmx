@@ -99,6 +99,7 @@ owner = 0;
             <string>///Do something when a menu item is clicked
 image_index = 2;
 
+if (global.player_action == 0) {
 global.pvp_flag = false;
 attacker = "None"; //Place holder for identity of attacker
 global.attack_roll = irandom_range(1,6);
@@ -185,6 +186,13 @@ with (obj_attack_menu_item)
 
 //Clean up beast event flag
 global.beast_event = false;
+
+//Flag player for having done something on their turn
+global.player_action = 1;
+} else {
+//Do nothing because player has already done something this turn
+
+}
 </string>
           </argument>
         </arguments>

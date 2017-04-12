@@ -198,6 +198,7 @@ switch(action) {
         //Reset flags
         global.pvp_flag = false; 
         global.rand_event = 0;
+        global.player_action = 0;
         
         global.player_roll_msg = ""; //Reset player roll message
         script_execute(scr_board_state);
@@ -205,6 +206,9 @@ switch(action) {
         
     case 16:
         //Player has chosen to play an event card
+        if (global.player_action == 0) {
+        //Flag player for having done something that turn
+        global.player_action = 1;
         
         //Remove previous event or monster card
         with (obj_event_card) {
@@ -225,6 +229,9 @@ switch(action) {
         global.beast_event = false;
 
         script_execute(scr_event);
+        } else {
+            //Do nothing because player has already done something this turn
+        }
         break;
         
     case 20:

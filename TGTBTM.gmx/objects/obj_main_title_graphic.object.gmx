@@ -36,6 +36,9 @@ global.current_health = 20;
 
 //Start game menu background music
 audio_play_sound(snd_game_menu_bg, 0 ,true);
+
+//Set player action flag to 0
+global.player_action = 0;
 </string>
           </argument>
         </arguments>
