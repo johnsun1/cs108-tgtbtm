@@ -18,7 +18,7 @@
             attack += 3;
         }
             
-        //Lightning storm
+        //Lightning storm event
         } else if (global.drawn_event_card == spr_event_2) {
             global.p1_health -= 2;
             global.p2_health -= 2;
@@ -31,7 +31,18 @@
                 //Take 5 damage
                 HP -= 5;
             }
+        } else if (global.drawn_event_card == spr_event_4) {
+        //Wild beast woman attack event
+            if (global.rand_event == 5 || global.rand_event == 6) {
+                attack += 4;
+                rep += 4;
+            } else if (global.rand_event == 4) {
+                //Nothing happens
+            } else if (global.rand_event == 1 || global.rand_event == 2 || global.rand_event == 3) {
+                HP -= 5;
+            }
         }
+        
         if (global.current_player == 1) {
             global.p1_attack += attack;
             global.p1_rep += rep;

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Choose a sprite
-sprite_index = choose(spr_event_1, spr_event_2, spr_event_3);
+sprite_index = choose(spr_event_1, spr_event_2, spr_event_3, spr_event_4);
 //text = "";
 //image_speed = 0;
 //owner = 0;
