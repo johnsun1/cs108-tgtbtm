@@ -7,6 +7,8 @@
   <sounds name="sound">
     <sound>sound\snd_game_board_bg</sound>
     <sound>sound\snd_game_menu_bg</sound>
+    <sound>sound\snd_button_click</sound>
+    <sound>sound\snd_button_release</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_gold_deck</sprite>

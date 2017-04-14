@@ -99,7 +99,9 @@ global.current_choice = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Reset image
+            <string>audio_play_sound(snd_button_release, 1, false);
+
+//Reset image
 image_index = 1;
 
 /// Determine button actions
@@ -274,7 +276,9 @@ switch(action) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 2;
+            <string>audio_play_sound(snd_button_click, 0, false);
+
+image_index = 2;
 </string>
           </argument>
         </arguments>

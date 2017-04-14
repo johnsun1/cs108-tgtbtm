@@ -114,7 +114,8 @@ text = "Attack";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
+            <string>audio_play_sound(snd_button_release, 0, false);
+image_index = 1;
 </string>
           </argument>
         </arguments>
@@ -137,7 +138,9 @@ text = "Attack";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Update button image
+            <string>audio_play_sound(snd_button_click, 0, false);
+
+//Update button image
 image_index = 2;
 
 ///Create a drop-down menu when the button is clicked
